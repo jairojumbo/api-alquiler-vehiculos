@@ -89,6 +89,8 @@ Esta sección te guiará paso a paso para poner en funcionamiento el proyecto en
 
 ## 🗄️ Configuración de la Base de Datos
 
+Se ha colocado un archivo en el proyecto dentro de la carpeta `init_db` con el nombre `basealquilervehiculos.sql` que se ejecuta al momento de levantar la base de datos. Este archivo crea las tablas necesarias y también inserta datos de ejemplo para facilitar el uso de la aplicación.
+
 Puedes visualizar el diagrama de la base de datos y sus relaciones en el siguiente enlace: [Diagrama de Base de Datos](https://dbdiagram.io/d/ALQUILER-VEHICULOS-67271d78b1b39dd85849db71).
 
 ![Diagrama de Base de Datos](https://github.com/jairojumbo/api-alquiler-vehiculos/blob/main/ALQUILER-VEHICULOS.png)
