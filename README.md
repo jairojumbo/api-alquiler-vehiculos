@@ -80,11 +80,11 @@ Esta sección te guiará paso a paso para poner en funcionamiento el proyecto en
    Crea un archivo `.env` en la raíz del proyecto para establecer las configuraciones de conexión a la base de datos. Este archivo debe contener la siguiente información:
    
    ```
+   POSTGRES_USER=postgres
+   POSTGRES_PASSWORD=postgres
+   POSTGRES_DB=alquilervehiculos
    DB_HOST=localhost
    DB_PORT=5432
-   DB_USER=tu_usuario
-   DB_PASSWORD=tu_password
-   DB_NAME=tu_base_de_datos
    ```
 
 ## 🗄️ Configuración de la Base de Datos
