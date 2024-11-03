@@ -66,12 +66,12 @@ Esta sección te guiará paso a paso para poner en funcionamiento el proyecto en
    cd api-alquiler-vehiculos
    ```
 
-3. **Instala las dependencias necesarias**:
+3. **Construye y despliega los contenedores**:
    
-   Este comando instalará todas las bibliotecas y paquetes que el proyecto requiere.
+   Utiliza el siguiente comando para construir la imagen Docker y desplegar los contenedores en segundo plano:
    
    ```bash
-   npm install
+   docker-compose up --build -d
    ```
 
 4. **Utiliza el archivo de configuración `.env` incluido en el repositorio**:
@@ -84,14 +84,6 @@ Esta sección te guiará paso a paso para poner en funcionamiento el proyecto en
    POSTGRES_DB=alquilervehiculos
    DB_HOST=localhost
    DB_PORT=5432
-   ```
-   
-   ```
-   DB_HOST=localhost
-   DB_PORT=5432
-   DB_USER=tu_usuario
-   DB_PASSWORD=tu_password
-   DB_NAME=tu_base_de_datos
    ```
 
 ## 🗄️ Configuración de la Base de Datos
@@ -183,38 +175,9 @@ CREATE TABLE pago (
 
 Sigue los siguientes pasos para desplegar la aplicación utilizando Docker Compose. Esto permitirá ejecutar tanto la base de datos como el servidor Node.js de manera conjunta y contenerizada.
 
-## 📦 Dockerfile
+Este proyecto ha sido probado utilizando [Play with Docker](https://labs.play-with-docker.com/), una herramienta que permite probar contenedores Docker en un entorno virtual de manera rápida y sencilla.
 
-El archivo `Dockerfile` define cómo se construye la imagen Docker para la aplicación Node.js.
-
-A continuación se muestra el archivo `Dockerfile` utilizado en este proyecto:
-
-```dockerfile
-# Dockerfile
-# Usar una imagen base de Node.js
-FROM node:14
-
-# Crear y establecer el directorio de trabajo
-WORKDIR /app
-
-# Copiar el package.json y package-lock.json
-COPY package*.json ./
-
-# Instalar dependencias
-RUN npm install
-
-# Copiar el código de la aplicación
-COPY . .
-
-# Exponer el puerto de la aplicación
-EXPOSE 3000
-
-# Comando para ejecutar la aplicación
-CMD ["node", "index.js"]
-```
-
-
-Para facilitar el despliegue del proyecto, se ha incluido un archivo `docker-compose.yml` que contiene la configuración necesaria para ejecutar tanto el backend como la base de datos PostgreSQL en contenedores Docker.
+Sigue los siguientes pasos para desplegar la aplicación utilizando Docker Compose. Esto permitirá ejecutar tanto la base de datos como el servidor Node.js de manera conjunta y contenerizada.
 
 1. **Asegúrate de tener Docker y Docker Compose instalados**:
    
@@ -226,11 +189,13 @@ Para facilitar el despliegue del proyecto, se ha incluido un archivo `docker-com
 
 3. **Ejecuta Docker Compose**:
    
-   Utiliza el siguiente comando para iniciar los contenedores.
+   Utiliza el siguiente comando para construir la imagen Docker y desplegar los contenedores en segundo plano:
    
    ```bash
-   docker-compose up
+   docker-compose up --build -d
    ```
+   
+   Esto levantará tanto la base de datos PostgreSQL como el servidor Node.js en contenedores separados, pero interconectados.
    
    Esto levantará tanto la base de datos PostgreSQL como el servidor Node.js en contenedores separados, pero interconectados.
 
@@ -279,19 +244,12 @@ services:
 volumes:
   pgdata:
 ```
-```
 
 ## 📌 Uso
 
 Después de haber seguido los pasos de instalación y despliegue, puedes ejecutar el proyecto y acceder a las distintas rutas para interactuar con la base de datos.
 
-1. Inicia el servidor:
-
-   ```bash
-   npm start
-   ```
-
-2. La API estará disponible en `http://localhost:3000`.
+La API estará disponible en `http://localhost:3000`.
 
 ### Rutas Principales
 
