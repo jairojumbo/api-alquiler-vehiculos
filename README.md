@@ -2,6 +2,24 @@
 
 ## 📄 Descripción
 
+🚗💻 Proyecto de Alquiler de Vehículos - Backend
+
+🌐 API RESTful: Desarrollada con Node.js y Express, esta API permite gestionar 🚘 alquileres de vehículos de forma eficiente y escalable.
+
+📊 Base de Datos: Utiliza PostgreSQL para almacenar la información en varias tablas, gestionando los datos de vehículos, clientes y reservas.
+
+⚙️ Operaciones CRUD: La API permite operaciones:
+
+➕ Crear
+🔍 Leer
+✏️ Actualizar
+❌ Eliminar
+Estas operaciones están diseñadas para interactuar con todos los elementos de la base de datos de forma organizada.
+
+🐳 Despliegue: La API está empaquetada y lista para desplegarse mediante Docker Compose, facilitando su instalación y administración en diferentes entornos.
+
+🛠️ Herramientas Principales: Node.js, Express, PostgreSQL, Docker Compose
+
 Este proyecto es un backend que consiste en una API RESTful desarrollada con Node.js y Express para interactuar con una base de datos PostgreSQL. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre varias tablas de la base de datos. 
 
 ## 🛠️ Tecnologías Utilizadas
