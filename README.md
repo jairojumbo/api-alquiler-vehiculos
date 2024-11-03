@@ -1,10 +1,10 @@
 # Proyecto: API REST con Node.js, Express y PostgreSQL
 
-## Descripción
+## 📄 Descripción
 
 Este proyecto es un backend que consiste en una API RESTful desarrollada con Node.js y Express para interactuar con una base de datos PostgreSQL. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre varias tablas de la base de datos. 
 
-## Tecnologías Utilizadas
+## 🛠️ Tecnologías Utilizadas
 
 - **Node.js**: Entorno de ejecución para el servidor.
 - **Express**: Framework para crear aplicaciones web y API.
@@ -13,13 +13,13 @@ Este proyecto es un backend que consiste en una API RESTful desarrollada con Nod
 - **Docker**: Contenerización de la aplicación.
 - **Docker Compose**: Orquestación de contenedores.
 
-## Características
+## ✨ Características
 
 - API RESTful para gestionar datos de una base de datos PostgreSQL.
 - Rutas para realizar las operaciones CRUD sobre las tablas.
 - Manejo de errores y validaciones.
 
-## Requisitos Previos
+## ✅ Requisitos Previos
 
 Asegúrate de tener instalados los siguientes programas:
 
@@ -28,7 +28,7 @@ Asegúrate de tener instalados los siguientes programas:
 - **Docker**: [Descargar Docker](https://www.docker.com/)
 - **Docker Compose**: Incluido con Docker Desktop.
 
-## Instalación
+## ⚙️ Instalación
 
 1. Clona este repositorio:
 
@@ -58,7 +58,7 @@ Asegúrate de tener instalados los siguientes programas:
    DB_NAME=tu_base_de_datos
    ```
 
-## Configuración de la Base de Datos
+## 🗄️ Configuración de la Base de Datos
 
 Puedes visualizar el diagrama de la base de datos y sus relaciones en el siguiente enlace: [Diagrama de Base de Datos](https://dbdiagram.io/d/ALQUILER-VEHICULOS-67271d78b1b39dd85849db71).
 
@@ -141,7 +141,7 @@ CREATE TABLE pago (
 );
 ```
 
-## Despliegue con Docker Compose
+## 🚀 Despliegue con Docker Compose
 
 Para facilitar el despliegue del proyecto, se ha incluido un archivo `docker-compose.yml` que contiene la configuración necesaria para ejecutar tanto el backend como la base de datos PostgreSQL en contenedores Docker.
 
@@ -194,7 +194,7 @@ volumes:
   postgres_data:
 ```
 
-## Uso
+## 📌 Uso
 
 1. Inicia el servidor:
 
@@ -223,12 +223,12 @@ volumes:
 
 (Repite este patrón para las tablas `cliente`, `empleado`, `metodo`, `vehiculo`, `alquiler`, `pago`)
 
-## Scripts Disponibles
+## 📜 Scripts Disponibles
 
 - `npm start`: Inicia el servidor en modo producción.
 - `npm run dev`: Inicia el servidor en modo desarrollo con nodemon.
 
-## Contribución
+## 🤝 Contribución
 
 Si deseas contribuir a este proyecto, sigue estos pasos:
 
@@ -238,11 +238,11 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 4. Haz push a la rama (`git push origin feature/nueva-funcionalidad`).
 5. Abre un Pull Request.
 
-## Licencia
+## 📄 Licencia
 
 Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 
-## Contacto
+## 📬 Contacto
 
 Creador - [Jairo Jumbo](https://github.com/jairojumbo)  
 Correo electrónico: [jairojumbo@gmail.com](mailto:jairojumbo@gmail.com)
