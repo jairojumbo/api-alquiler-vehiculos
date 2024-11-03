@@ -14,7 +14,6 @@
 🔍 Leer
 ✏️ Actualizar
 ❌ Eliminar
-
 Estas operaciones están diseñadas para interactuar con todos los elementos de la base de datos de forma organizada.
 
 🐳 Despliegue: La API está empaquetada y lista para desplegarse mediante Docker Compose, facilitando su instalación y administración en diferentes entornos.
@@ -75,9 +74,9 @@ Esta sección te guiará paso a paso para poner en funcionamiento el proyecto en
    npm install
    ```
 
-4. **Crea un archivo de configuración `.env`**:
+4. **Utiliza el archivo de configuración `.env` incluido en el repositorio**:
    
-   Crea un archivo `.env` en la raíz del proyecto para establecer las configuraciones de conexión a la base de datos. Este archivo debe contener la siguiente información:
+   No es necesario crear un archivo `.env`, ya que el proyecto ya incluye uno en la raíz del repositorio. Puedes modificar este archivo para establecer las configuraciones de conexión a la base de datos según tus necesidades. El contenido del archivo es el siguiente:
    
    ```
    POSTGRES_USER=postgres
@@ -85,6 +84,14 @@ Esta sección te guiará paso a paso para poner en funcionamiento el proyecto en
    POSTGRES_DB=alquilervehiculos
    DB_HOST=localhost
    DB_PORT=5432
+   ```
+   
+   ```
+   DB_HOST=localhost
+   DB_PORT=5432
+   DB_USER=tu_usuario
+   DB_PASSWORD=tu_password
+   DB_NAME=tu_base_de_datos
    ```
 
 ## 🗄️ Configuración de la Base de Datos
