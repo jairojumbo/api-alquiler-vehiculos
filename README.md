@@ -14,6 +14,7 @@
 🔍 Leer
 ✏️ Actualizar
 ❌ Eliminar
+
 Estas operaciones están diseñadas para interactuar con todos los elementos de la base de datos de forma organizada.
 
 🐳 Despliegue: La API está empaquetada y lista para desplegarse mediante Docker Compose, facilitando su instalación y administración en diferentes entornos.
