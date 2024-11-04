@@ -212,9 +212,6 @@ Sigue los siguientes pasos para desplegar la aplicación utilizando Docker Compo
 A continuación se muestra el archivo `docker-compose.yml` utilizado en este proyecto:
 
 ```yaml
-# docker-compose.yml
-version: '3.8'
-
 services:
   app:
     build:
