@@ -177,6 +177,8 @@ Sigue los siguientes pasos para desplegar la aplicación utilizando Docker Compo
 
 Este proyecto ha sido probado utilizando [Play with Docker](https://labs.play-with-docker.com/), una herramienta que permite probar contenedores Docker en un entorno virtual de manera rápida y sencilla.
 
+![Play with Docker](https://github.com/jairojumbo/api-alquiler-vehiculos/blob/main/PLAY-WITH-DOCKER.png)
+
 Para acceder al contenedor desde la consola de Windows en ambas máquinas, se debe generar una clave SSH con el siguiente comando:
 
 ```bash
@@ -260,8 +262,6 @@ networks:
 
 Después de haber seguido los pasos de instalación y despliegue, puedes ejecutar el proyecto y acceder a las distintas rutas para interactuar con la base de datos.
 
-La API estará disponible en `http://localhost:3000`.
-
 ### Rutas Principales
 
 - `GET /marcas`: Obtener todos los registros de la tabla `marca`.
@@ -280,11 +280,6 @@ La API estará disponible en `http://localhost:3000`.
 - `DELETE /tipos/:id`: Eliminar un registro de la tabla `tipo`.
 
 (Repite este patrón para las tablas `cliente`, `empleado`, `metodo`, `vehiculo`, `alquiler`, `pago`)
-
-## 📜 Scripts Disponibles
-
-- `npm start`: Inicia el servidor en modo producción.
-- `npm run dev`: Inicia el servidor en modo desarrollo con nodemon.
 
 ## 🤝 Contribución
 
