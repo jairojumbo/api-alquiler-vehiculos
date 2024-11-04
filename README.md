@@ -177,7 +177,7 @@ Sigue los siguientes pasos para desplegar la aplicación utilizando Docker Compo
 
 Este proyecto ha sido probado utilizando [Play with Docker](https://labs.play-with-docker.com/), una herramienta que permite probar contenedores Docker en un entorno virtual de manera rápida y sencilla.
 
-![Play with Docker](https://github.com/jairojumbo/api-alquiler-vehiculos/blob/main/PLAY-WITH-DOCKER.PNG|width=10)
+<img src="https://github.com/jairojumbo/api-alquiler-vehiculos/blob/main/PLAY-WITH-DOCKER.PNG" alt="Play with Docker" width="50%">
 
 Para acceder al contenedor desde la consola de Windows en ambas máquinas, se debe generar una clave SSH con el siguiente comando:
 
