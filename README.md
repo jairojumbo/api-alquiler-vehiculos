@@ -177,6 +177,12 @@ Sigue los siguientes pasos para desplegar la aplicación utilizando Docker Compo
 
 Este proyecto ha sido probado utilizando [Play with Docker](https://labs.play-with-docker.com/), una herramienta que permite probar contenedores Docker en un entorno virtual de manera rápida y sencilla.
 
+Para acceder al contenedor desde la consola de Windows en ambas máquinas, se debe generar una clave SSH con el siguiente comando:
+
+```bash
+ssh-keygen -t ecdsa
+```
+
 Sigue los siguientes pasos para desplegar la aplicación utilizando Docker Compose. Esto permitirá ejecutar tanto la base de datos como el servidor Node.js de manera conjunta y contenerizada.
 
 1. **Asegúrate de tener Docker y Docker Compose instalados**:
@@ -196,10 +202,6 @@ Sigue los siguientes pasos para desplegar la aplicación utilizando Docker Compo
    ```
    
    Esto levantará tanto la base de datos PostgreSQL como el servidor Node.js en contenedores separados, pero interconectados.
-   
-   Esto levantará tanto la base de datos PostgreSQL como el servidor Node.js en contenedores separados, pero interconectados.
-
-   Esto levantará tanto la base de datos PostgreSQL como el servidor Node.js.
 
 4. **Accede a la API**:
    
@@ -215,18 +217,23 @@ version: '3.8'
 
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: alquilervehiculos_app
     ports:
       - "3000:3000"
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=alquilervehiculos
-      - DB_HOST=db
-      - DB_PORT=5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: alquilervehiculos
+      DB_HOST: db
+      DB_PORT: 5432
     depends_on:
       - db
+    networks:
+      - alquiler_network
+    restart: unless-stopped
 
   db:
     image: postgres:13
@@ -240,9 +247,16 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./init_db:/docker-entrypoint-initdb.d
+    networks:
+      - alquiler_network
+    restart: unless-stopped
 
 volumes:
   pgdata:
+
+networks:
+  alquiler_network:
+    driver: bridge
 ```
 
 ## 📌 Uso
