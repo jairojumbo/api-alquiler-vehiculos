@@ -8,6 +8,8 @@ WORKDIR /app
 # Copiar el package.json y package-lock.json
 COPY package*.json ./
 
+RUN npm config set registry http://registry.npmjs.org/
+
 # Instalar dependencias
 RUN npm install
 
