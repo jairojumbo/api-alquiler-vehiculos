@@ -1,14 +1,12 @@
 # Dockerfile
 # Usar una imagen base de Node.js
-FROM node:14
+FROM node:18
 
 # Crear y establecer el directorio de trabajo
 WORKDIR /app
 
 # Copiar el package.json y package-lock.json
 COPY package*.json ./
-
-RUN npm config set registry http://registry.npmjs.org/
 
 # Instalar dependencias
 RUN npm install
