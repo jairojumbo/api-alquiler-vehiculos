@@ -1,8 +1,9 @@
 # Proyecto: API REST con Node.js, Express y PostgreSQL
 
 <div align="center">
-   .. image:: https://nodejs.org/es
-    :target: https://nodejs.org](https://img.shields.io/badge/Node.js-20.1.9-%235FA04E?style=plastic&link=https%3A%2F%2Fnodejs.org%2Fen%2F
+   [.. image:: https://nodejs.org/es
+    :target: https://nodejs.org](https://img.shields.io/badge/Node.js-20.1.9-%235FA04E?style=plastic&link=https%3A%2F%2Fnodejs.org%2Fen%2F](https://img.shields.io/badge/Node.js-20.1.9-%235FA04E?style=plastic&link=https%3A%2F%2Fnodejs.org%2Fen%2F
+)
 </div>
 
 ## 📄 Descripción
