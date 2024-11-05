@@ -1,35 +1,83 @@
-a
+# Proyecto: API REST con Node.js, Express y PostgreSQL
+
+## 📄 Descripción
+
+🚗💻 Proyecto de Alquiler de Vehículos - Backend
+
+🌐 API RESTful: Desarrollada con Node.js y Express, esta API permite gestionar 🚘 alquileres de vehículos de forma eficiente y escalable.
+
+📊 Base de Datos: Utiliza PostgreSQL para almacenar la información en varias tablas, gestionando los datos de vehículos, clientes y reservas.
+
+⚙️ Operaciones CRUD: La API permite operaciones:
+
+➕ Crear
+🔍 Leer
+✏️ Actualizar
+❌ Eliminar
+Estas operaciones están diseñadas para interactuar con todos los elementos de la base de datos de forma organizada.
+
+🐳 Despliegue: La API está empaquetada y lista para desplegarse mediante Docker Compose, facilitando su instalación y administración en diferentes entornos.
+
+🛠️ Herramientas Principales: Node.js, Express, PostgreSQL, Docker Compose
+
+Este proyecto es un backend que consiste en una API RESTful desarrollada con Node.js y Express para interactuar con una base de datos PostgreSQL. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre varias tablas de la base de datos. 
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Node.js**: Entorno de ejecución para el servidor.
+- **Express**: Framework para crear aplicaciones web y API.
+- **PostgreSQL**: Base de datos relacional para almacenar la información.
+- **Sequelize** (opcional): ORM para gestionar la base de datos.
+- **Docker**: Contenerización de la aplicación.
+- **Docker Compose**: Orquestación de contenedores.
+
+## ✨ Características
+
+- API RESTful para gestionar datos de una base de datos PostgreSQL.
+- Rutas para realizar las operaciones CRUD sobre las tablas.
+- Manejo de errores y validaciones.
+
+## ✅ Requisitos Previos
+
+Asegúrate de tener instalados los siguientes programas:
+
+- **Node.js**: [Descargar Node.js](https://nodejs.org/)
+- **PostgreSQL**: [Descargar PostgreSQL](https://www.postgresql.org/download/)
+- **Docker**: [Descargar Docker](https://www.docker.com/)
+- **Docker Compose**: Incluido con Docker Desktop.
+
+## ⚙️ Instalación
 
 Esta sección te guiará paso a paso para poner en funcionamiento el proyecto en tu entorno local.
 
 1. **Clona este repositorio**:
-   
+
    Utiliza el siguiente comando para clonar el repositorio en tu máquina local.
-   
+
    ```bash
    git clone https://github.com/jairojumbo/api-alquiler-vehiculos.git
    ```
 
 2. **Navega al directorio del proyecto**:
-   
+
    Dirígete al directorio donde se encuentra el proyecto clonado.
-   
+
    ```bash
    cd api-alquiler-vehiculos
    ```
 
 3. **Construye y despliega los contenedores**:
-   
+
    Utiliza el siguiente comando para construir la imagen Docker y desplegar los contenedores en segundo plano:
-   
+
    ```bash
    docker-compose up --build -d
    ```
 
 4. **Utiliza el archivo de configuración `.env` incluido en el repositorio**:
-   
+
    No es necesario crear un archivo `.env`, ya que el proyecto ya incluye uno en la raíz del repositorio. Puedes modificar este archivo para establecer las configuraciones de conexión a la base de datos según tus necesidades. El contenido del archivo es el siguiente:
-   
+
    ```
    POSTGRES_USER=postgres
    POSTGRES_PASSWORD=postgres
